@@ -1,0 +1,271 @@
+<html>
+<head>
+	<title>BMI Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+	<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="container" id="bmi">
+    	<div class="panel">
+    		<h2 class="text-center">Check your BMI</h2>
+    		
+    			<p id="introText" class="text-center">Enter your weight and height below to check your BMI results</p>
+    			
+    			<form>
+    				<div id="weightInput">
+    					<p>Put your weight in here (KG)</p>
+    		     		<input id="weight" type="number" pattern="[0-9]*" name="a" />
+    				</div>
+    				<div id="heightInput">
+    					<p>And your height in here (CM)</p>
+	    				 <input id="height" type="number" pattern="[0-9]*" name="b"/> 
+    				</div>
+    		     <button type="button" class="btn" onclick="calculate()">Calculate BMI</button>
+    		</form>
+    		<div id="results" class="text-center">Your BMI results will appear here</div>
+    	</div>
+    </div>
+	<div class="container">
+        <div class="heading">
+			<h2>
+			  GAIN OR LOSE
+			  
+			</h2>
+		  </div>
+		  <div class="tabs" id="demotab">
+			<ul class="nav nav-tabs " id="myTab" role="tablist">
+			  <li class="nav-item" role="presentation">
+				<button
+				  class="nav-link btn btn-outline-primary"
+				  id="home-tab"
+				  data-bs-toggle="tab"
+				  data-bs-target="#home-tab-pane"
+				  type="button"
+				  role="tab"
+				  aria-controls="home-tab-pane"
+				  aria-selected="true"
+				  
+				>GAIN WEIGHT
+				
+			  </button>
+			  </li>
+			  
+			  <li class="nav-item" role="presentation">
+				<button
+				  class="nav-link"
+				  id="contact-tab"
+				  data-bs-toggle="tab"
+				  data-bs-target="#contact-tab-pane"
+				  type="button"
+				  role="tab"
+				  aria-controls="contact-tab-pane"
+				  aria-selected="false"
+				>
+				  LOSS WEIGHT
+				</button>
+			  </li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+			  <div
+				class="tab-pane show  "
+				id="home-tab-pane"
+				role="tabpanel"
+				aria-labelledby="home-tab"
+				tabindex="0"
+			  ><p >People who need to gain weight can often do this by increasing their intake of foods rich in whole carbohydrates, healthy fats, and protein. 
+				Examples include whole grains, dried fruit, potatoes, avocados, oily fish, eggs, and dairy products.</p>
+				<h4>Example</h4>
+				<ul>
+					<li>Rice</li>
+					<li>Whole grain bread</li>
+					<li>Whole grain cereals</li>
+					<li>Dried fruits</li>
+					<li>Other starches(potato, corn)</li>
+					<li>Protein</li>
+					<li>Eggs</li>
+					<li>Nuts and seeds</li>
+				</ul>
+				<h4>Eat three to five meals a day</h4>
+				<p>Eating at least three meals a day can make it easier to increase calorie intake. Snacking between meals can also help to increase the number of calories in the diet.</p>
+				  
+			  </div>
+			  
+			  <div
+				class="tab-pane fade"
+				id="contact-tab-pane"
+				role="tabpanel"
+				aria-labelledby="contact-tab"
+				tabindex="0"
+			  ><P>If you’re trying to lose weight, you may be tempted to cut calories, but eating too little can put your health at risk. In fact, research shows a diet of less than 1,000 calories a day generally fails to provide the balanced nutrition your body needs, and it can lead to vitamin and mineral deficiencies associated with serious health issues</P>
+			  <ul>
+			  <li>Lean protien</li>
+			  <li>Vegetables</li>
+			  <li>Avocados</li>
+			  <li> Apples</li>
+			  <li>Berries</li>
+			  <li> Shrimp</li>
+			  <li>Lupini Beans</li>
+			  <li>Raw Oats</li>
+			</ul>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- secondtab line -->
+
+
+
+		<div class="container">
+			<div class="heading">
+				<h2>
+				  FITNESS
+				  
+				</h2>
+			  </div>
+			  <div class="tabs" id="secondtab">
+				<ul class="nav nav-tabs " id="mysecondTab" role="tablist">
+				  <li class="nav-item" role="presentation">
+					<button
+					  class="nav-link btn btn-outline-primary"
+					  id="second-tab1"
+					  data-bs-toggle="tab"
+					  data-bs-target="#second-tab1-pane"
+					  type="button"
+					  role="tab"
+					  aria-controls="second-tab1-pane"
+					  aria-selected="true"
+					  
+					>CHEST
+					
+				  </button>
+				  </li>
+				  
+				  <li class="nav-item" role="presentation">
+					<button
+					  class="nav-link"
+					  id="second-tab2"
+					  data-bs-toggle="tab"
+					  data-bs-target="#second-tab2-pane"
+					  type="button"
+					  role="tab"
+					  aria-controls="second-tab2-pane"
+					  aria-selected="false"
+					>
+					  ARMS
+					</button>
+				  </li>
+				</li>
+				  
+				<li class="nav-item" role="presentation">
+				  <button
+					class="nav-link"
+					id="second-tab3"
+					data-bs-toggle="tab"
+					data-bs-target="#second-tab3-pane"
+					type="button"
+					role="tab"
+					aria-controls="second-tab3-pane"
+					aria-selected="false"
+				  >
+					LEG
+				  </button>
+				</li>
+				</ul>
+				<div class="tab-content" id="mySecondTabContent">
+				  <div
+					class="tab-pane show  "
+					id="second-tab1-pane"
+					role="tabpanel"
+					aria-labelledby="second-tab1"
+					tabindex="0"
+				  ><h4>PUSH-UP</h4>
+				  <p>3-6 sets of 6-12reps</p>
+				  <img src="./fitness image/normalpush.jpg">
+				  <img src="./fitness image/innerpush.jpg">
+				  <img src="./fitness image/lowerchestpush.jpg">
+				  <img src="./fitness image/upperpush.jpg">
+				 <br> <br>
+				  <h4>DIPS</h4>
+				  <img src="./fitness image/dipchestpush.jpg">
+				  <br><br>
+				  <h4>BARBELL BENCH PRESS</h4>
+				  <img src="./fitness image/barbellbenchpresspush.jpg">
+					 <br><br>
+					 <h4>DUMBBELL BENCH PRESS</h4>
+					 <img src="./fitness image/dumbbellbenchpush.jpg">
+					 <br><br>
+					 <h4>MACHINE FLY</h4>
+					 <img src="./fitness image/machinechest.jpg">
+
+				  </div>
+				  
+				  <div
+					class="tab-pane fade"
+					id="second-tab2-pane"
+					role="tabpanel"
+					aria-labelledby="second-tab2"
+					tabindex="0"
+				  ><h4>BICEPS</h4>
+				  <img src="./fitness image/bicep barbell.jpg">
+				  <img src="./fitness image/preacher curl.jpg">
+				  <img src="./fitness image/cablebicep.jpg">
+				  <br><br>
+				  <h4>TRICEPS</h4>
+				  <img src="./fitness image/skulltrip.jpg">
+				  <img src="./fitness image/cabletricep.jpg">
+				  <img src="./fitness image/single arm.jpg">
+				  <br><br>
+				  <h4>WRIST</h4>
+				  <img src="./fitness image/wristflex.png">
+				  <img src="./fitness image/wristext.png">
+				  <img src="./fitness image/wristsuspination.png">
+
+					
+					
+				  </div>
+				  <div
+					class="tab-pane fade"
+					id="second-tab3-pane"
+					role="tabpanel"
+					aria-labelledby="second-tab3"
+					tabindex="0"
+				  >
+				  <h4>CALF RAISES</h4>
+				  <img src="./fitness image/calfraises.jpg">
+				  <img src="./fitness image/sdcalf.png">
+				  <img src="./fitness image/stand calf.png">
+				  <br><br>
+				  <h4>SQUATS</h4>
+				  <img src="./fitness image/squats.jpg">
+				  <img src="./fitness image/SQUATBARBELL.jpg">
+				  <img src="./fitness image/bulgariansquats.jpg">
+				  <img src="./fitness image/gobletsquat.jpg">
+				  <br><br>
+				  <h4>LEG PRESS & CURL</h4>
+				  <img src="./fitness image/leg press.jpg">
+				  <img src="./fitness image/legcurl.webp" height="220px" width="300px">
+				  <br><br>
+				  <h4>LUNGE</h4>
+				  <img src="./fitness image/reverselung.jpg">
+				  <img src="./fitness image/lunge.jpg">
+					
+					
+				  </div>
+				</div>
+			  </div>
+			</div>
+		<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+	<script src="main.js"></script>
+</body>
+</html>
